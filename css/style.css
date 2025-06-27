@@ -85,7 +85,7 @@ body {
 }
 
 .banner-bar {
-  position: relative;
+  position: fixed;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.13);
   padding-top: 0;      /* 上の余白を削除 */
@@ -306,12 +306,12 @@ html, body {
 
   /* バナーは上部に固定しつつ小さく */
   .banner-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.132); /* 半透明黒 */
+    background-color: rgba(0, 0, 0, 0.13); /* 半透明黒 */
     color: white;
     z-index: 10;
     box-sizing: border-box;
@@ -330,20 +330,24 @@ html, body {
   }
 
   /* Xアイコンの位置と色 */
-  .x-link {
-    position: relative; /* banner-bar内なのでrelativeでOK */
-    top: 8px;
-    right: 20px;
-    padding: 0;
-  }
+  /* アイコンの親要素に位置を指定 */
+.x-link {
+  position: absolute; /* または relative */
+  top: 12px;
+  right: 20px; /* ← ここで右に寄せる数を指定 */
+  z-index: 10;
+  padding: 0;
+}
 
-  .x-icon {
-    width: 30px;
-    height: 30px;
-    filter: none; /* 白色にする */
-    cursor: poinonenter;
-    transition: opacity 0.3s ease;
-  }
+/* アイコンそのもののスタイル */
+.x-icon {
+  width: 30px;
+  height: 30px;
+  filter: none;
+  cursor: pointer; /* ← 修正 */
+  transition: opacity 0.3s ease;
+}
+
 
   .x-icon:hover {
     opacity: 0.7;
@@ -395,9 +399,3 @@ html, body {
 
 }
 
-
-
-
-
-
-メインフォトを全画面に
