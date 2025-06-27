@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon/favicon.ico" sizes="32x32">
+<link rel="icon" href="img/favicon/icon.svg" type="img/svg+xml">
+<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+<link rel="manifest" href="img/favicon/manifest.webmanifest">
+</head>
+
+
+ <body class="hero">
+  <header>
+    <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+    <img src="img/logo.png" alt="ハンバーガー">
+  </button>
+   <nav class="nav-menu">
+    <a href="new-stage.html">最新公演</a>
+    <a href="index.html">劇団員</a>
+  </nav>
+</header>
+
+ <div class="hero">  
+  <a href="new-stage.html">
+    <img src="img/stage-flyer.png" alt="最新公演フライヤー">
+  </a>
+</div>
+
+
+ <div class="reservation-buttons">
+  <a href="https://x.com/fujii_uu" target="_blank">
+    <img src="img/reserve-button.png" alt="ご予約はこちら" class="reserve-button">
+  </a>
+
+</div>
+
+ <div class="story-title">
+   あらすじ
+ </div>
+
+<div class="hero">
+  <div class="long-line"></div>
+</div>
+
+ 
+ <div class="story-text">
+  近未来の地球。植物の激減と食糧難で滅亡の危機に瀕した人類は、居住可能な惑星を求めて宇宙の彼方に調査隊を送り込む。クルーの1人として選ばれた男性は、もう会えないと泣きじゃくる娘に必ず戻ると約束して、過酷なミッションに挑む。
+ </div>
+
+  <div class="profile-title">
+  出演
+ </div>
+
+<div class="hero">
+  <div class="long-line"></div>
+</div>
+
+
+<div class="cast-images">
+ <div class="cast-member">
+  <img src="img/takahashi-issei.png" alt="出演者1">
+  <p class="cast-role">ゆうゆう</p>
+  <p class="cast-name">藤井憂憂</p>  
+ </div>
+ <div class="cast-member">
+  <img src="img/matu-takako.png" alt="出演者2">
+  <p class="cast-role">ゆうFO</p>
+  <p class="cast-name">藤井憂憂</p>
+ </div>
+ <div class="cast-member">
+  <img src="img/mitushima-hikari.png" alt="出演者3">
+  <p class="cast-role">うゆうゆ</p>
+  <p class="cast-name">藤井憂憂</p>
+ </div>
+ <div class="cast-member">
+  <img src="img/matuda-ryuhei.png" alt="出演者4">
+  <p class="cast-role">優美</p>
+  <p class="cast-name">藤井憂憂</p> 
+ </div>
+</div>
+
+<div class="centered-image">
+  <img src="img/place.png" alt="場所">
+</div>
+
+<div class="bonus">
+  <img src="img/bonus-group.png" alt="特典と地図">
+</div>
+
+
+<div class="hero">
+  <div class="long-line"></div>
+</div>
+
+
+<div class="page-number">
+  <span class="roboto">1</span><span class="roboto"> / </span><span class="roboto">1</span>
+</div>
+
+
+
+<div class="page-navigation">
+  <button class="nav-button prev" onclick="location.href='index.html'">
+    <img src="img/prev.png" alt="前のページへ">
+  </button>
+  <button class="nav-button next" onclick="location.href='index.html'">
+    <img src="img/next.png" alt="次のページへ">
+  </button>
+</div>
+
+
+<div class="hero">
+  <div class="long-line"></div>
+</div>
+
+
+ <div class="left-sns-icons">
+  <a href="https://x.com/FUJII_UU" target="_blank">
+   <img src="img/X.png" alt="x">
+  </a>
+  <a href="https://www.instagram.com/fujii_uu/" target="_blank">
+    <img src="img/instagram.png" alt="instagram">
+  </a>
+  <a href="https://youtu.be/8ujiOyMPxug" target="_blank">
+    <img src="img/youtube.png" alt="youtube">
+  </a>
+  <a href="https://open.spotify.com/intl-ja" target="_blank">
+    <img src="img/spotify.png" alt="spotify">
+  </a>
+</div>
+
+
+<div class="footer-layout">
+  <div class="footer-links">
+    <a href="#">Stage</a>
+    <a href="#">Movie</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="footer-image">
+    <a href="https://x.com/FUJII_UU" target="_blank">
+     <img src="img/rajio.png" alt="ラジオ">
+    </a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".hamburger");
+    const menu = document.querySelector(".nav-menu");
+
+    button.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", !expanded);
+    });
+  });
+</script>
+
+</body>
+</html>
