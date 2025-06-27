@@ -374,7 +374,29 @@ html, body {
   line-height: 2.5; /* テキストの行間もゆったり見せたいとき */
 }
 
+.main-heading {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+ }
+
+
+  .tab-btn {
+    background-color: #f2f2f2;
+    color: #000;
+  }
+
+  .tab-btn.active {
+    background-color: black;
+    color: white;
+  }
+
+
 }
+
+
+
 
 
 
