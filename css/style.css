@@ -281,6 +281,11 @@ body {
 }
 
 
+.role.special-role {
+  margin-top: 8px !important;
+}
+
+
 .site-footer {
   width: 100%;
   margin: 0;
@@ -476,7 +481,7 @@ html, body {
   .role {
   position: static !important;  /* すでに設定済み */
   display: block;
-  margin-top: 4px;
+  margin-top: 0px;
   white-space: normal;          /* 折り返しを許可 */
   text-align: left;
   min-width: 100px;             /* 役名の最低幅を確保 */
