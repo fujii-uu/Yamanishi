@@ -220,28 +220,64 @@ body {
 
 .tab-content p {
   position: relative;
-  padding-left: 50px; /* メイン写真の左位置に合わせて調整 */
+  padding-left: 0px; /* メイン写真の左位置に合わせて調整 */
   margin-bottom: 1em;
 }
 
+.entry-block {
+  display: flex;
+  flex-direction: column;   /* 横並びから縦並びに変更 */
+  align-items: flex-start;  /* 左寄せ */
+  gap: 20px;                /* 年とテキストの間の隙間 */
+  margin-top: 50px !important;
+  margin-bottom: 0px !important;
+  padding-left: 0px !important;
+}
+
 .year {
-  position: absolute;
-  left: 0px;  /* ここも調整可。親のpadding-leftより少し内側に */
-  top: 35px;
-  width: 80px; /* 数字の表示幅を広くして読みやすく */
+  flex-shrink: 0;
+  width: auto;              /* 幅を解除 */
   font-weight: bold;
   font-size: 15px;
   color: #000;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  margin-top: 0;
+  margin-bottom: 0px;       /* YEAR と演目の間の余白 */
+}
+
+.entry-text {
+  margin: 0 !important;
+  line-height: 2;
+}
+
+.role {
+  position: static !important;  /* 絶対配置を解除 */
+  display: block;
+  margin-top: 4px;              /* 演目と役名の間の余白 */
+  white-space: normal;          /* 折り返しOK */
+  text-align: left;
+  min-width: 100px;
+  max-width: 100%;
+  word-wrap: break-word;
+  color: rgba(0, 0, 0, 0.522);
 }
 
 
+.entry-block.right-align {
+  justify-content: flex-start; /* 左寄せ */
+  text-align: left;            /* 左揃え */
+  padding-left: 90px;   
+  margin-top: 0px !important;    /* 余白を極力減らす */
+  margin-bottom: 0px !important;   
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
-
-.entry-text {
-  display: block;
-  line-height: 1.8;
-  margin-bottom: 50px;
+.entry-block.right-align .entry-text {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.4; /* 行間も狭くできる */
 }
 
 
@@ -361,17 +397,13 @@ html, body {
 
 /* アイコンそのもののスタイル */
 .x-icon {
-  width: 25px;
+  width: 20px;
   height: 25px;
   filter: none;
   cursor: pointer; /* ← 修正 */
   transition: opacity 0.3s ease;
 }
 
-
-  .x-icon:hover {
-    opacity: 0.7;
-  }
 
   .long-line {
   margin-top: 0;
@@ -422,16 +454,37 @@ html, body {
   color: #777;
 }
 
- .entry-block {
-    margin-bottom: 28px;
+
+  .entry-block {
+    flex-direction: column;   /* 横並びから縦並びに変更 */
+    align-items: flex-start;  /* 左寄せ */
+    margin-top: 50px !important;
+    margin-bottom: 0px !important;
+    padding-left: 0px !important; /* 適宜調整 */
+  }
+
+  .year {
+    width: auto;              /* 必要なら幅を解除 */
+    margin-bottom: 0px;       /* YEAR と演目の間の余白 */
   }
 
   .entry-text {
-    display: inline-block;
-    line-height: 1.9;
+    margin: 0 !important;
+    line-height: 2;
   }
 
+  .role {
+  position: static !important;  /* すでに設定済み */
+  display: block;
+  margin-top: 4px;
+  white-space: normal;          /* 折り返しを許可 */
+  text-align: left;
+  min-width: 100px;             /* 役名の最低幅を確保 */
+  max-width: 100%;              /* 横幅制限 */
+  word-wrap: break-word;        /* 単語の途中で改行も可 */
+}
 
 }
+
 
 
