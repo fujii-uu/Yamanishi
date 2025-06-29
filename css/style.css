@@ -112,8 +112,8 @@ body {
 
 .x-link {
   position: absolute;  /* 絶対配置に */
-  top: 10px;           /* 上から10px */
-  right: 30px;         /* 右から20px */
+  top: 7px;           /* 上から10px */
+  right: 35px;         /* 右から20px */
   width: auto;         /* 幅は中身に合わせる */
   padding-right: 40px;    /* フレックスのpaddingは不要 */
   display: block;      /* フレックス解除 */
@@ -122,6 +122,22 @@ body {
   padding-top: 5px;      /* バナーより前面に */
 }
 
+.Instagram-icon:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Instagram-link {
+  position: absolute;  /* 絶対配置に */
+  top: 8px;           /* 上から10px */
+  right: 70px;         /* 右から20px */
+  width: auto;         /* 幅は中身に合わせる */
+  padding-right: 40px;    /* フレックスのpaddingは不要 */
+  display: block;      /* フレックス解除 */
+  box-sizing: border-box;
+  z-index: 10;   
+  padding-top: 5px;      /* バナーより前面に */
+}
 
 .about-section {
   width: 70%;
@@ -149,6 +165,7 @@ body {
   padding: 0;
   line-height: 2;
 }
+
 
 .long-line {
   margin-top: 0;
@@ -218,10 +235,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
+
+
 .entry-text {
-  display: inline-block;
-  margin-top: 50px; /* この数値で「2024」との間の余白を調整 */
-  line-height: 2.5; /* テキストの行間もゆったり見せたいとき */
+  display: block;
+  line-height: 1.8;
+  margin-bottom: 50px;
 }
 
 
@@ -333,7 +353,7 @@ html, body {
   /* アイコンの親要素に位置を指定 */
 .x-link {
   position: absolute; /* または relative */
-  top: 12px;
+  top: 13px;
   right: 20px; /* ← ここで右に寄せる数を指定 */
   z-index: 10;
   padding: 0;
@@ -341,8 +361,8 @@ html, body {
 
 /* アイコンそのもののスタイル */
 .x-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   filter: none;
   cursor: pointer; /* ← 修正 */
   transition: opacity 0.3s ease;
@@ -402,5 +422,16 @@ html, body {
   color: #777;
 }
 
+ .entry-block {
+    margin-bottom: 28px;
+  }
+
+  .entry-text {
+    display: inline-block;
+    line-height: 1.9;
+  }
+
+
 }
+
 
