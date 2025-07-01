@@ -96,10 +96,12 @@ body {
   width: 100%;
 }
 
+.sns-media-icons {
+  display: none;
+}
 
 
-
-.x-icon {
+.x-icon  {
   width: 30px;
   height: 30px;
   transition: opacity 0.3s ease;
@@ -122,6 +124,12 @@ body {
   padding-top: 5px;      /* バナーより前面に */
 }
 
+.Instagram-icon  {
+  width:35px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
 .Instagram-icon:hover {
   opacity: 1;
   cursor: pointer;
@@ -129,8 +137,8 @@ body {
 
 .Instagram-link {
   position: absolute;  /* 絶対配置に */
-  top: 8px;           /* 上から10px */
-  right: 70px;         /* 右から20px */
+  top: 5px;           /* 上から10px */
+  right: 85px;         /* 右から20px */
   width: auto;         /* 幅は中身に合わせる */
   padding-right: 40px;    /* フレックスのpaddingは不要 */
   display: block;      /* フレックス解除 */
@@ -391,25 +399,23 @@ html, body {
     line-height: 1;
   }
 
-  /* Xアイコンの位置と色 */
-  /* アイコンの親要素に位置を指定 */
-.x-link {
-  position: absolute; /* または relative */
-  top: 13px;
-  right: 20px; /* ← ここで右に寄せる数を指定 */
-  z-index: 10;
-  padding: 0;
+  .sns-icons {
+    display: none;
+  }
+  
+ .sns-media-icons {
+  display: flex;
+  flex-direction: column;   /* ← 縦並びにする */
+  align-items: center;      /* ← アイコンを中央揃えに */
+  gap: 15px;                /* ← アイコンの縦間隔 */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.7); /* 必要なら背景を調整 */
+  padding: 15px 10px;
+  border-radius: 20px;
 }
-
-/* アイコンそのもののスタイル */
-.x-icon {
-  width: 20px;
-  height: 25px;
-  filter: none;
-  cursor: pointer; /* ← 修正 */
-  transition: opacity 0.3s ease;
-}
-
 
   .long-line {
   margin-top: 0;
